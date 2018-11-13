@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Compilar con: gcc subs.c -o subs -lmosquitto
+
 // Server connection parameters
 #define MQTT_HOSTNAME "localhost/192.168.1.1"
 #define MQTT_BROKER "192.168.1.91"
@@ -14,7 +16,8 @@ struct mosquitto* mosq;
 
 void my_message_callback(struct mosquitto* mosq, void* Obj, const struct mosquitto_message* message)
 {
-    // TO-DO
+    char* msg = (char*) message->payload;
+    printf("%s\n", msg);
 }
 
 int main(int argc, char** argv)
@@ -28,7 +31,7 @@ int main(int argc, char** argv)
         exit(1);
     }
 
-    mosquitto_username_pw_set(mosq, MQTT_USERNAME, MQTT_PASSWORD);
+    //mosquitto_username_pw_set(mosq, MQTT_USERNAME, MQTT_PASSWORD);
 
 
     int ret = mosquitto_connect(mosq, MQTT_BROKER, MQTT_PORT, 0);
