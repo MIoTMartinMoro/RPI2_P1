@@ -31,7 +31,7 @@ int main(int argc, char** argv)
         exit(1);
     }
 
-    //mosquitto_username_pw_set(mosq, MQTT_USERNAME, MQTT_PASSWORD);
+    mosquitto_username_pw_set(mosq, MQTT_USERNAME, MQTT_PASSWORD);
 
 
     int ret = mosquitto_connect(mosq, MQTT_BROKER, MQTT_PORT, 0);
