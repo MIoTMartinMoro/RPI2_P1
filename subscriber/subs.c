@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Compilar con: gcc subs.c -o subs -lmosquitto
-
 // Server connection parameters
 #define MQTT_HOSTNAME "localhost/192.168.1.1"
 #define MQTT_BROKER "192.168.1.91"
