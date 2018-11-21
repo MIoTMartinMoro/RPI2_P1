@@ -11,7 +11,6 @@ float sensorBmp280Convert(uint32_t rawValue)
 float read_bmp (uint8_t value, uint8_t* op)
 {
     FILE* fp;
-    char* pch;
     char resp[1035];
     char respError[1035];
     char command[200];

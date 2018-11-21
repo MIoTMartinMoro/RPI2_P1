@@ -27,7 +27,6 @@ void calculate_thermal_sesation(float tempFun, float humFun, float *senTermFun)
 float read_hum (uint8_t value, uint8_t* op)
 {
     FILE* fp;
-    char* pch;
     char resp[1035];
     char respError[1035];
     char command[200];

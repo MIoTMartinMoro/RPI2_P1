@@ -62,47 +62,47 @@ int main(int argc, char* argv[])
 
     // Temperatura ambiente Ci40
     sprintf(msg, "Temperatura ambiente Ci40: %f", data);
-    mosquitto_publish(mosq, NULL, topic, sizeof(msg), msg, 0, 1);
+    mosquitto_publish(mosq, NULL, topic, strlen(msg), msg, 0, 0);
     sleep(2);
     // Temperatura ambiente SensorTag temperatura
     data = read_tmp(AMB_TMP_VALUE, NULL);
     sprintf(msg, "Temperatura ambiente SensorTag(tmp): %f", data);
-    mosquitto_publish(mosq, NULL, topic, sizeof(msg), msg, 0, 1);
+    mosquitto_publish(mosq, NULL, topic, strlen(msg), msg, 0, 0);
     sleep(2);
     // Temperatura objeto SensorTag temperatura
     data = read_tmp(OBJ_TMP_VALUE, NULL);
     sprintf(msg, "Temperatura objeto SensorTag(tmp): %f", data);
-    mosquitto_publish(mosq, NULL, topic, sizeof(msg), msg, 0, 1);
+    mosquitto_publish(mosq, NULL, topic, strlen(msg), msg, 0, 0);
     sleep(2);
     // Temperatura ambiente SensorTag presion
     data = read_bmp(AMB_TMP_VALUE, NULL);
     sprintf(msg, "Temperatura ambiente SensorTag(bmp): %f", data);
-    mosquitto_publish(mosq, NULL, topic, sizeof(msg), msg, 0, 1);
+    mosquitto_publish(mosq, NULL, topic, strlen(msg), msg, 0, 0);
     sleep(2);
     // Presion SensorTag presion
     data = read_bmp(BMP_VALUE, NULL);
     sprintf(msg, "Presion SensorTag(bmp): %f", data);
-    mosquitto_publish(mosq, NULL, topic, sizeof(msg), msg, 0, 1);
+    mosquitto_publish(mosq, NULL, topic, strlen(msg), msg, 0, 0);
     sleep(2);
     // Temperatura ambiente SensorTag humedad
     data = read_hum(AMB_TMP_VALUE, NULL);
     sprintf(msg, "Temperatura ambiente SensorTag(hum): %f", data);
-    mosquitto_publish(mosq, NULL, topic, sizeof(msg), msg, 0, 1);
+    mosquitto_publish(mosq, NULL, topic, strlen(msg), msg, 0, 0);
     sleep(2);
     // Humedad SensorTag humedad
     data = read_hum(HUM_VALUE, NULL);
     sprintf(msg, "Humedad SensorTag(hum): %f", data);
-    mosquitto_publish(mosq, NULL, topic, sizeof(msg), msg, 0, 1);
+    mosquitto_publish(mosq, NULL, topic, strlen(msg), msg, 0, 0);
     sleep(2);
     // Sensacion termica SensorTag humedad
     data = read_hum(SEN_TMP_VALUE, NULL);
     sprintf(msg, "Sensacion termica SensorTag(hum): %f", data);
-    mosquitto_publish(mosq, NULL, topic, sizeof(msg), msg, 0, 1);
+    mosquitto_publish(mosq, NULL, topic, strlen(msg), msg, 0, 0);
     sleep(2);
     // Luminosidad SensorTag luminosidad
     data = read_opt(NULL);
     sprintf(msg, "Luminosidad SensorTag(opt): %f", data);
-    mosquitto_publish(mosq, NULL, topic, sizeof(msg), msg, 0, 1);    
+    mosquitto_publish(mosq, NULL, topic, strlen(msg), msg, 0, 0);    
 
     thermo3_click_disable();
 

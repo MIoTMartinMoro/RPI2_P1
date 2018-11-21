@@ -19,7 +19,6 @@ void sensorTmp007Convert(uint16_t rawAmbTemp, uint16_t rawObjTemp, float* tAmb, 
 float read_tmp (uint8_t value, uint8_t* op)
 {
     FILE* fp;
-    char* pch;
     char resp[1035];
     char respError[1035];
     char command[200];

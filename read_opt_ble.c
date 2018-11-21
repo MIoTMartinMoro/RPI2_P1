@@ -19,7 +19,6 @@ float sensorOpt3001Convert (uint16_t rawData)
 float read_opt (uint8_t* op)
 {
     FILE* fp;
-    char* pch;
     char resp[1035];
     char respError[1035];
     char command[200];
